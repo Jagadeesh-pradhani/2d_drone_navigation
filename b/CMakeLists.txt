@@ -19,4 +19,5 @@ target_link_libraries(${PROJECT_NAME}_ex analysis)
 # tests can be run from build directory (for this example ./test/utest
 if(BUILD_TESTS)
     add_subdirectory(test)
+    add_subdirectory(marking)
 endif()
