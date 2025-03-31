@@ -43,13 +43,11 @@ vector<double> Analysis::timeToImpact(Pose origin) {
 
         // Compute rotation time (how long it takes to turn towards the target)
         double rot_time = abs(tf2::normaliseAngle(relative.bearing)) / Display::OMEGA_MAX;
-        // Debug prints (can be removed or commented)
-        // std::cout << "rotation: " << rot_time << std::endl;
+        std::cout << "rotation: " << rot_time << std::endl;
         
         // Compute translation time (how long it takes to cover the distance to the target)
         double trans_time = relative.range / Display::V_MAX;
-        // Debug prints (can be removed or commented)
-        // std::cout << "translation: " << trans_time << std::endl;
+        std::cout << "translation: " << trans_time << std::endl;
         
         // Total time is the sum of rotation and translation times
         times.push_back(rot_time + trans_time);
